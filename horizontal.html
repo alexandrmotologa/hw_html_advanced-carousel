@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ADVANCED CAROUSEL</title>
+    <link rel="shortcut icon" href="media/icon/carousel.png" type="image/x-icon">
+    <style>
+        body{
+            background-color: #333333;
+        }
+        .carousel{
+            width: 800px;
+            height: 700px;
+            border: 5px solid #555;
+            margin: 20px auto;
+            overflow: hidden;
+
+        }
+        .carousel .slides{
+            background-color: #444;
+            height: 600px;
+            width: 2412px;
+            transition: 1s;
+        }
+        .carousel>.controls{
+            height: 100px;
+            background-color: #000;
+            text-align: center;
+        }
+        .carousel>.controls img{
+            height: 100px;
+        }
+        #s2:target .slides{
+            margin-left: -804px;
+        }
+        #s3:target .slides{
+            margin-left: -1608px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div id="s1">
+            <div id="s2">
+                <div id="s3">
+                    <div class="slides">
+                        <img src="media/1.jpg" alt="pic">
+                        <img src="media/2.jpg" alt="pic">
+                        <img src="media/3.jpg" alt="pic">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+              <a href="#s1"><img src="media/1.jpg" alt="pic"></a>
+              <a href="#s2"><img src="media/2.jpg" alt="pic"></a>
+              <a href="#s3"><img src="media/3.jpg" alt="pic"></a>
+        </div>
+    </div>
+</body>
+</html>
